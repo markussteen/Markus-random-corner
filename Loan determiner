@@ -1,0 +1,49 @@
+import java.util.*;
+
+import javax.sound.sampled.SourceDataLine;
+
+public class New {
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+        double salary;
+        int numberOfYears;
+    
+        System.out.println("How much is your yearly salary");
+        salary=keyboard.nextDouble();
+
+        System.out.println("How many years have you been at your job");
+        numberOfYears=keyboard.nextInt();
+
+    //determine whether the user qualifies for the loan
+
+        if (salary>=50000)
+        {
+            if (numberOfYears >=3) {
+                System.out.println("You qualify for the loan");
+                }
+            else{
+             System.out.println("You must be on the job for 3 years or more");
+            }
+        }
+        else
+        {
+            System.out.println("You must earn 50,000 or more to qualify");
+        }
+        if (salary>=50000 && numberOfYears>3) {
+            System.out.println("You qualify for the loan, Congrats");
+        } else {
+            System.out.println("You do not qualify for the loan");
+        }
+
+        String password="ThePassword";
+
+        System.out.println("Enter the passoword");
+
+        System.out.println("Enter the password");
+        String userPassword = keyboard.nextLine();
+
+            if(password.equals(userPassword)) {
+            System.out.println("You entered the correct password");
+        }
+    }
+}
