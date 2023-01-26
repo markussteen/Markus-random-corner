@@ -1,0 +1,64 @@
+//How will you ask the user for their input?
+//How will you randomly select a fish
+//How will you compare what the user entered to the randomly selected fish? 
+//Guidelines for a good program: 
+//The program works, following the dialog and rules above.
+//The code is clear and understandable: 
+//ask the user
+//You chose ahi, computer chose 
+import java.util.*;
+
+public class Fish {
+    public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    String userguess, result;
+    String compGuess = "randomFish";
+    int count = 0;
+
+//start
+    System.out.println("Im thinking of a fish. Is it Ahi, Opah, Mahimahi, Ono?");
+    System.out.println("Make your guess.");
+
+//user guess
+for (int counter = 1;counter <=10; counter++ ){
+    System.out.println("Enter your guess: ");
+        userguess = input.nextLine();
+
+       
+
+//comp guess
+
+    Random rand = new Random();
+    int computerNumber=rand.nextInt(4) +1;
+        if (computerNumber==1) {
+            compGuess = "ahi";
+             }
+
+         else if (computerNumber==2) {
+            compGuess = "opah";
+            }
+
+        else if (computerNumber==3) {
+            compGuess = "mahimahi";
+            }
+
+        else if (computerNumber==4) {
+            compGuess = "ono";
+            }
+
+if (compGuess.equalsIgnoreCase(userguess)) {
+    System.out.println("you are right, I was thinking of " + compGuess);
+    count++;
+    }
+        
+else{
+    System.out.println("You are wrong, I was thinking of " + compGuess);
+    }
+
+System.out.println("You have " + ( 10-counter ) + " tries left");
+}
+System.out.println("you were right " + count + " time(s)");
+
+    }
+
+}
