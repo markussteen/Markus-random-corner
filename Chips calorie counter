@@ -1,0 +1,75 @@
+import java.util.*;
+
+public class Assignment {
+    public static void main(String[] args) {
+        Scanner user = new Scanner(System.in);
+        int userchoice;
+    
+//intro
+System.out.println("Welcome to Mele's Ono Bake Shop");
+    
+//user input
+    System.out.println("Select the type of chips you have eaten (1 for Taro, 2 for Poi, 3 for Ube, and 4 to Exit)");
+    userchoice = user.nextInt();
+
+    String choice = "none";
+    int bagSize = 0;
+
+    if (userchoice == 1) {
+        choice = "Taro";
+        bagSize = 150;
+        System.out.println("You chose Taro");
+    }
+
+    if (userchoice == 2) {
+        choice = "Poi";
+        bagSize = 125;
+        System.out.println("You chose Poi");
+    }
+
+    if (userchoice == 3) {
+        choice = "Ube";
+        bagSize = 100;
+        System.out.println("You chose Ube");
+    }
+    if (userchoice == 4) {
+        choice = "Exit";
+        System.out.println("Exit");
+        System.out.println("Thank you for using Mele's");
+    }
+    if (userchoice >= 5) {
+        System.out.println("Try again, exiting");
+        System.out.println("Thank you for using Mele's");
+    }
+//
+if (userchoice <= 3) {
+    System.out.println("So you ate " + choice + ", how many did you eat?");
+}
+
+//How many chips
+int numOfChips = 0;
+double calories = 0;
+
+    numOfChips = user.nextInt();
+
+//Calories
+//Taro
+if (userchoice == 1) {
+    calories = (numOfChips * 24);
+}
+
+//Poi
+if (userchoice == 2) {
+    calories = (numOfChips * 39.6);
+}
+
+//Ube
+if (userchoice == 3) {
+    calories = (numOfChips * 65);
+}
+
+//result
+    System.out.println("A full bag of " + choice + " contains roughly " + bagSize + " chips. You ate " +numOfChips + ", which is around " + calories + " calories");
+
+    }
+}
