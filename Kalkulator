@@ -1,0 +1,50 @@
+//first number
+//second number
+//What would you like to do (+,-,/,*)
+
+import java.util.*;
+
+public class Kalkulator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int firstNumber,secondNumber,result;
+
+//first number
+System.out.println("Enter first number: ");
+        firstNumber = input.nextInt();
+//second number
+System.out.println("Enter second number: ");
+        secondNumber = input.nextInt();
+
+//What would you like to do (+,-,/,*)
+System.out.println("Ok, so you have " + firstNumber + " and " + secondNumber + ", what would you like to do with them?");
+
+//second number
+System.out.println("Mulitply (x), add (+), subtract (-) or divide (/) ");
+char operator = input.next().charAt(0);
+
+     switch(operator) {
+        case '+':
+            result = firstNumber + secondNumber;
+            System.out.println("Your new result is: " + result);
+            break;
+
+        case '-':
+            result = firstNumber - secondNumber;
+            System.out.println("Your new result is: " + result);
+            break; 
+
+        case 'x':
+            result = firstNumber * secondNumber;
+            System.out.println("Your new result is " + result);
+            break;
+
+        case '/':
+            result = firstNumber / secondNumber;
+            System.out.println("Your result is " + result);
+            break;
+    
+        }
+
+    }
+}
