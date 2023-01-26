@@ -1,0 +1,45 @@
+//ASk THe user for h** name
+//Ask the user for their height
+//ask the user for pounds
+//Calculate their BMI
+// Hello, ... your BMI is ...., That's ...
+
+import java.util.*;
+
+public class BMI{
+ 
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int weight,height,BMI;
+        String name;
+    
+//Ask The user for name
+System.out.println("Enter your name: ");
+        name = input.nextLine();
+
+//Ask the user for their height
+
+System.out.println("Enter height in inches: ");
+       height = input.nextInt();
+
+//ask the user for weight
+System.out.println("Enter weight in pounds");
+        weight = input.nextInt();
+        
+//BMI result
+BMI = (weight * 703) / (height * height);
+
+//Result with condition statement
+System.out.print("Hello "+name+" your BMI is "+BMI+"." );
+if (BMI <= 19)
+    System.out.print(" You are underweight.");
+
+if(BMI > 19.1 && BMI <= 25)
+    System.out.print(" You are an average joe.");
+
+if (BMI > 25.1 && BMI <= 30)
+    System.out.print(" You are overweight.");
+
+if (BMI > 30.1 && BMI < 1000000)
+    System.out.print(" You are obese.");
+}}
